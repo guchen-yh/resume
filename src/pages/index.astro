@@ -1,0 +1,178 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../assets/iconfont.css";
+import { Skill } from "../components/Skill";
+import config from "../../meta.config";
+const { skills, name } = config;
+---
+
+<Layout title="Welcome to Astro.">
+  <div class="mt-6 max-w-screen-lg md:flex mx-auto">
+    <div class="md:w-1/3 p-2 relative">
+      <div class="md:fixed">
+        <div class="md:block">
+          <div class="flex justify-center">
+            <img
+              class="h-32 w-32 rounded-full mx-auto mx-4"
+              src="https://avatars.githubusercontent.com/u/73578576?v=4"
+            />
+          </div>
+          <div class="mb-12 text-center mt-4 justify-center items-center">
+            <h1 class="text-2xl text-xl text-gray-800 font-bold">{name}</h1>
+            <div class="md:text-lg text-gray-600">前端工程师</div>
+            <div class="md:text-lg text-gray-600">六年工作经验</div>
+            <div class="text-gray-600 md:hidden mt-1">(wx: nahui324)</div>
+          </div>
+        </div>
+        <div class="mx-4 my-4 hidden md:block">
+          <div class="my-5 text-lg text-gray-600 flex">
+            <div class="mr-2">
+              <span class="iconfont icon-wechat"></span>
+            </div>
+            nahui324
+          </div>
+          <div class="my-5 text-lg text-gray-600 flex">
+            <div class="mr-2">
+              <span class="iconfont icon-Phoneshouji"></span>
+            </div>
+            16651615101
+          </div>
+          <div class="my-5 text-lg text-gray-600 flex">
+            <div class="mr-2">
+              <span class="iconfont icon-email"></span>
+            </div>
+            yhui110324@163.com
+          </div>
+          <div class="my-5 text-lg text-gray-600 flex">
+            <div class="mr-2">
+              <span class="iconfont icon-position"></span>
+            </div>
+            Beijing
+          </div>
+          <a
+            href="https://github.com/guchen-yh"
+            class="my-5 flex"
+            target="_blank"
+          >
+            <div class="mr-2">
+              <span class="iconfont icon-github"></span>
+            </div>
+            <span class="text-blue-500">GitHub</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="md:w-2/3 p-2 w-full">
+      <div class="mx-4 mb-6">
+        <h1 class="mb-4 text-4xl text-gray-700 font-bold">个人评价</h1>
+        <p class="text-lg">
+          在科蓝团队中担任前端开发小组长，解决一些技术难题和公共问题。学习了如何去拆解需求、评估工时、分配人力。<br
+          />
+          高德新场景业务组，通过多部门协调合作的经验，提升自身对于业务的理解及产品的思维方式；喜欢探索一些新技能，目前在学习
+          React、Flutter 及 可视化方向，不断丰富自己的技术栈。
+        </p>
+      </div>
+      <div class="mx-4">
+        <h1 class="mb-4 text-4xl text-gray-700 font-bold">工作经历</h1>
+        <ul>
+          <li class="mb-4">
+            <h2 class="text-3xl font-medium text-gray-800">高德地图</h2>
+            <div>
+              <i class="bx bx-calendar text-sm" style="color: #666"></i>
+              <small class="text-sm text-gray-600">2020.10 - 至今</small>
+            </div>
+            <div class="mt-1">
+              <div>
+                <h3 class="text-2xl font-medium text-gray-800">疫情防控政策</h3>
+                <p>
+                  背景：春节来临之际，各地疫情防控出入政策的出台，查询政策的需求的变成思乡人刚需
+                  借助高德数据优势，可以根据输入的起终点快速获取两地政策，普惠用户、方便出行
+                  <br />技术栈：vue2
+                </p>
+              </div>
+            </div>
+            <div class="mt-1">
+              <div>
+                <h3 class="text-2xl font-medium text-gray-800">
+                  高德地图群组（位置共享）模块
+                </h3>
+                <p>
+                  1、基于钉钉SDK实现高德IM能力共建：富文本消息模板化、各种基础消息类型定义和梳理、服务下
+                  行事件链路打通、新建艾特消息<br />
+                  2、聊天面板下沉，由单一业务组件下沉到lib内给予其他业务支持<br
+                  /> 3、群成员关系建设：头像、名称、昵称、手机号等功能与系统层数据协调打通<br
+                  />
+                  技术栈：FOX
+                </p>
+              </div>
+            </div>
+            <div class="mt-1">
+              <div>
+                <h3 class="text-2xl font-medium text-gray-800">DIY地图</h3>
+                <p>
+                  1、将工作地图中的点线面能力下沉到公共逻辑中实现DIY的绘制生产能力
+                  2、DIY地图分享能力的建设
+                  3、骨架屏公共组件的实现并投入到DIY业务中
+                </p>
+              </div>
+            </div>
+            <div class="mt-1">
+              <div>
+                <h3 class="text-2xl font-medium text-gray-800">工作地图</h3>
+                <p>
+                  1、基于群组聊天能力拓展工作地图聊天面板、群关系下沉复用，提供工作地图群成员管理<br
+                  />
+                  2、基于canvas三方库实现地图资源的点线面绘制能力<br /> 3、地图成员、资源、群信息等权限管理，并完成将群组能力在工作地图剔除，建立地图关系<br
+                  />
+                  4、工作地图十万个资源的技术方案协商沟通并落地，实现图面资源的聚合展示<br
+                  />
+                  5、工作地图支持模板化，在web端实现指定页面的自定义，并在端上展示对应的自定义字段<br
+                  />
+                </p>
+              </div>
+            </div>
+            <div class="mt-1">
+              <div>
+                <h3 class="text-2xl font-medium text-gray-800">
+                  Web端工作地图
+                </h3>
+                <p>
+                  将端上的现有业务迁移到web端，完成web端工作地图的前端从0到1的开发落地
+                </p>
+              </div>
+            </div>
+            <div class="mt-1">
+              <div>
+                <h3 class="text-2xl font-medium text-gray-800">工作之余</h3>
+                <p>
+                  输出自定义lint unify-scheme的实现 ——
+                  根据当前schema的长度、参数、类型做统一规范约束 输出高德IDE <br
+                  />
+                  console插件，实现选择后快捷键增加一行打印该字段的代码，并可一键删除所有console
+                  <br />
+                  参加第一届奇点杯-完成救灾物资调度系统并闯入决赛 参与王坚博士的2050
+                  <br />
+                  票务系统前端实现 参与松果公益完成来自远方小朋友的小小心愿 参与阿里内部相亲系统橙双橙对的实现
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="mx-4">
+        <h1 class="mb-4 text-4xl text-gray-700 font-bold">Skill</h1>
+        <ul>
+          <li class="mb-6 flex flex-wrap">
+            {
+              skills.map((name) => {
+                return <Skill name={name} client:load />;
+              })
+            }
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style></style>
